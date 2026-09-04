@@ -689,16 +689,11 @@
   function startPetals() { petalTimer = setInterval(spawnPetal, 1400); }
   document.getElementById('enterBtn').addEventListener('click', () => setTimeout(startPetals, 600));
 
-  // ---- Botón NO — respuesta amable ----
+  // ---- Botón NO — solo agradece ----
   document.getElementById('btnNo').addEventListener('click', () => {
     const btn = document.getElementById('btnNo');
-    btn.textContent = 'Piénsalo bien 💚';
+    btn.textContent = '¡Gracias! 💚';
     btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = '¿Segura? Toca aquí';
-      btn.disabled = false;
-      btn.onclick = () => document.getElementById('btnSi').click();
-    }, 1800);
   });
 
   // ---- Botón SÍ — celebración + confeti ----
