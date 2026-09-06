@@ -303,7 +303,7 @@
     color:var(--cream);text-align:center;padding:30px;
     opacity:0;visibility:hidden;
     transition:opacity .6s,visibility .6s;
-    overflow:hidden;
+    overflow-y:auto;
   }
   .celebrate.show{opacity:1;visibility:visible}
   .celebrate .yay{
@@ -585,7 +585,9 @@
   <div class="msg">Tu <strong>"Sí, acepto"</strong> es el mejor regalo. ¡Prepárate para vivir este día conmigo!</div>
   <div class="whats-box">
     <label>Envía tu mensaje a Samantha por WhatsApp</label>
-    <textarea id="whatsMsg" rows="3">¡Sí, acepto ser tu dama de honor! 💚 Cuenta conmigo para el 19 de diciembre.</textarea>
+    <textarea id="whatsMsg" rows="10">No podía pensar en nadie más que tú para acompañarme en este día tan especial, me conoces desde antes incluso de tener pareja y siempre has estado para mí, en las buenas y en las malas, así que ir al altar sin tu compañía como mi dama de honor no sería lo mismo. Gracias por ser parte de mi vida, gracias por seguir escribiendo historias juntas, sin duda el proceso hasta el día de mi boda y mi boda lo harás más increíble y será una experiencia más para nuestro libro de vida.
+
+Gracias por aceptar y por ser parte de mi vida. Vamos a divertirnos y a vivir, ¡te quiero!</textarea>
     <a class="btn-whats" id="btnWhats" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 1.1-.4.2-.6.1c-.9-.5-1.9-1.1-2.7-2.4-.2-.4.2-.4.6-1.2.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
       Enviar por WhatsApp
@@ -617,7 +619,9 @@
     document.getElementById('greetLabel').style.display = 'block';
     // También personalizamos el mensaje de WhatsApp
     document.getElementById('whatsMsg').value =
-      '¡Hola ' + NOVIA + '! Soy ' + nombre + '. 💚\n\n¡Sí, acepto ser tu dama de honor! Cuenta conmigo para el 19 de diciembre.';
+      '¡Hola ' + NOVIA + '! Soy ' + nombre + '. 💚\n\n' +
+      'No podía pensar en nadie más que tú para acompañarme en este día tan especial, me conoces desde antes incluso de tener pareja y siempre has estado para mí, en las buenas y en las malas, así que ir al altar sin tu compañía como mi dama de honor no sería lo mismo. Gracias por ser parte de mi vida, gracias por seguir escribiendo historias juntas, sin duda el proceso hasta el día de mi boda y mi boda lo harás más increíble y será una experiencia más para nuestro libro de vida.\n\n' +
+      'Gracias por aceptar y por ser parte de mi vida. Vamos a divertirnos y a vivir, ¡te quiero!';
   } else {
     document.getElementById('introName').textContent = '¡Hola!';
   }
